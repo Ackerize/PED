@@ -8,7 +8,7 @@ void conteo(int *matriz)
     int positivos = 0, negativos = 0;
 
     for (int i = 0; i < 3; i++)
-    { //solo recorre la primera fila
+    {
         for (int j = 0; j < 3; j++)
         {
             if (*(matriz + i * 3 + j) >= 0)
