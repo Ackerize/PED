@@ -5,10 +5,14 @@ using namespace std;
 void conteo(int *matriz){
 
   int pares = 0, impares = 0;  
+  int filas = 3, columnas = 3;
 
-  for (int i = 0; i < 3; i++){
-    for (int j = 0; j < 3; j++){
-      if( *(matriz + i * 3 + j) %2 == 0){
+  for (int fila_actual = 0; fila_actual < filas; fila_actual++){ //For para recorrer las filas
+    for (int columna_actual = 0; columna_actual < columnas; columna_actual++){ // For para recorrer las columnas
+
+      //Se compara si el numero es divisible entre 2
+      if( *(matriz + fila_actual * columnas + columna_actual) %2 == 0){  // Usa la formula para acceder a un elemento de la matriz 
+      // -> *(puntero + fila_actual * columnas + columna_actual)
         pares++;
       }else{
         impares++;
@@ -33,8 +37,7 @@ int main(){
     }
   } 
 
-  conteo(*matriz);
-  cout << endl;
-
+  conteo(*matriz); // Se pasa la direccion de memoria de la matriz
+  
   return 0;
 }
