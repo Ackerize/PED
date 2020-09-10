@@ -7,10 +7,9 @@ using namespace std;
 //Un registro funciona similar a una clase
 
 struct Estudiante{
-
-    string nombre;
-    string apellido;
-    float* notas; //sera un arreglo
+  string nombre;
+  string apellido;
+  float* notas; //sera un arreglo
 };
 
 void ingresarDatos(int, Estudiante[]);
@@ -104,24 +103,25 @@ float calcularPromedio(int n, float *notas){
 
 int encontrarMayor(int n, float *promedios){
 
-    float mayor = 0;
-    int posicion;
+  float mayor = 0;
+  int posicion;
 
-    for (int i = 0; i < n; i++){
+  for (int i = 0; i < n; i++){
 
-        if (promedios[i] > mayor){
+      if (promedios[i] > mayor){
 
-            mayor = promedios[i];
-            posicion = i;
+          mayor = promedios[i];
+          posicion = i;
 
-        }
+      }
 
-    }
+  }
 
-    return posicion;
+  return posicion;
 
 }
 
+/* Funcion encargada en mostrar al estudiante con mayor promedio */
 void devolverEstudiante(int pos, Estudiante *estudiantes){
 
     cout << "\nEl estudiante con el mayor promedio es: " << estudiantes[pos].nombre << " " << estudiantes[pos].apellido;

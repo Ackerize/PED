@@ -17,8 +17,13 @@ int main() {
 }
 
 float raiz(int n, float r) {
+    /* Guardamos el valor actual de r, en una nueva variable */
   float a = r;
+
+    /* Aplicamos la formula y se guarda en la variable r */
   r = ((n/r)+r)/2;
+
+  /*Entre mas pequeño sea el error, mayor exactitud tendra la respuesta */
   if (abs(r-a) < 0.0000001){
     return r;
   }

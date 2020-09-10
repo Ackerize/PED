@@ -15,6 +15,7 @@ float promedioNotas(int, float[]);
 string verificarEstado(float);
 
 int main() {
+    /* Declaramos y solicitamos al usuario la cantidad de notas del alumno (n) */
     int n;
     cout << "Ingrese la cantidad de notas: ";
     cin >> n;
