@@ -16,15 +16,15 @@ int main(){
 
   int *puntero = arreglo; // Inicializamos nuestro puntero, apuntando a la primera posicion de nuestro arreglo
 
-  llenarArreglo(puntero); // Llamada de la funcion recursiva
+  llenarArreglo(puntero,n); // Llamada de la funcion recursiva
 
-  *puntero = arreglo; // Reiniciamos el puntero
+  puntero = arreglo; // Reiniciamos el puntero
   cout << "Mostrando el arreglo..." << endl;
-  mostrarArreglo(puntero); 
+  mostrarArreglo(puntero,n); 
 
-  *puntero = arreglo; // Reiniciamos el puntero
-  cout << "Mostrando el arreglo recursivamente..." << endl;
-  mostrarArreglo(puntero);
+  puntero = arreglo; // Reiniciamos el puntero
+  cout << endl << "Mostrando el arreglo recursivamente..." << endl;
+  mostrarArreglo(puntero,n);
 
   return 0;
 }
