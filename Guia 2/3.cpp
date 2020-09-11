@@ -83,3 +83,61 @@ void mostrarArregloRecursivo(int *arreglo, int n){
     */
     mostrarArregloRecursivo(arreglo, n-1);
 }
+
+
+int arreglo[3] = {5,8,7};
+
+*arreglo = 5 // Por defecto, el puntero siempre apunta a la primera posicion del arreglo.
+
+/* Primera llamada de la funcion */
+mostrarArregloRecursivo(arreglo[0], 3);
+
+/* n = 3 */
+3 == 0 // false, entonces no entra al if
+
+/* Se imprime el valor que almacena la posicion del puntero
+    Como es la primera iteracion, el valor es 5
+*/
+cout << 5 << " ";
+
+/* Nos movemos a la siguiente posicion del arreglo con el puntero */
+arreglo++; // *arreglo = 8 
+
+/* Llamamos nuevamente a la funcion, y le restamos 1 a n */
+/* Segunda llamada de la funcion */
+mostrarArregloRecursivo(arreglo[1], 2);
+
+/* n = 2 */
+2 == 0 // false, entonces no entra al if
+
+/* Se imprime el valor que almacena la posicion del puntero
+    Como es la primera iteracion, el valor es 8
+*/
+cout << 8 << " ";
+
+/* Nos movemos a la siguiente posicion del arreglo con el puntero */
+arreglo++; // *arreglo = 7 
+
+/* Llamamos nuevamente a la funcion, y le restamos 1 a n */
+/* Tercera llamada de la funcion */
+mostrarArregloRecursivo(arreglo[2], 1);
+
+/* n = 1 */
+1 == 0 // false, entonces no entra al if
+
+/* Se imprime el valor que almacena la posicion del puntero
+    Como es la primera iteracion, el valor es 7
+*/
+cout << 7 << " ";
+
+/* Nos movemos a la siguiente posicion del arreglo con el puntero */
+arreglo++; // *arreglo = valor_basura
+
+/* Llamamos nuevamente a la funcion, y le restamos 1 a n */
+/* Cuarta y ultima llamada de la funcion */
+mostrarArregloRecursivo(arreglo[3], 0);
+
+/* n = 0 */
+0 == 0 // true, entra al if y finaliza la ejecucion de la funcion
+
+/* RESULTADO: 5 8 7 */

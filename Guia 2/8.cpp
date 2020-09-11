@@ -38,3 +38,7 @@ void torreHanoi(int n, int inicio, int aux, int fin){
 /* Mayor informacion sobre el funcionamiento de las torres de Hanoi
 https://platzi.com/tutoriales/1050-programacion-basica/1498-tutorial-avanzado-recursividad-y-torres-de-hanoi/
 */
+
+
+
+
