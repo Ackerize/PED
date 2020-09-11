@@ -16,15 +16,15 @@ int main(){
 
   int *puntero = arreglo; // Inicializamos nuestro puntero, apuntando a la primera posicion de nuestro arreglo
 
-  llenarArreglo(puntero); // Llamada de la funcion recursiva
+  llenarArreglo(puntero,n); // Llamada de la funcion recursiva
 
-  *puntero = arreglo; // Reiniciamos el puntero
+  puntero = arreglo; // Reiniciamos el puntero
   cout << "Mostrando el arreglo..." << endl;
-  mostrarArreglo(puntero); 
+  mostrarArreglo(puntero,n); 
 
-  *puntero = arreglo; // Reiniciamos el puntero
-  cout << "Mostrando el arreglo recursivamente..." << endl;
-  mostrarArreglo(puntero);
+  puntero = arreglo; // Reiniciamos el puntero
+  cout << endl << "Mostrando el arreglo recursivamente..." << endl;
+  mostrarArreglo(puntero,n);
 
   return 0;
 }
@@ -83,6 +83,7 @@ void mostrarArregloRecursivo(int *arreglo, int n){
     */
     mostrarArregloRecursivo(arreglo, n-1);
 }
+<<<<<<< HEAD
 
 
 int arreglo[3] = {5,8,7};
@@ -141,3 +142,5 @@ mostrarArregloRecursivo(arreglo[3], 0);
 0 == 0 // true, entra al if y finaliza la ejecucion de la funcion
 
 /* RESULTADO: 5 8 7 */
+=======
+>>>>>>> c70a4e8a5224b374a707c83aeb27c8261fe93317
