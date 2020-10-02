@@ -74,17 +74,17 @@ float calcularTotal(int n){
         }else{
             if(pedidos[i].modalidad == 'U'){
                if(pedidos[i].peso < 100 || (pedidos[i].peso >= 100 && pedidos[i].peso <= 500)){
-                   total += (pedidos[i].peso * 10);
+                   total +=  10;
                }else if(pedidos[i].peso > 500){
-                   total += (pedidos[i].peso * 15);
+                   total += 15;
                }
             }else if(pedidos[i].modalidad == 'N'){
-                total += (pedidos[i].peso * 5);
+                total += 5;
             }else {
                 if(pedidos[i].peso < 100 ){
-                   total += (pedidos[i].peso * 5);
+                   total += 5;
                 }else if(pedidos[i].peso >= 100){
-                   total += (pedidos[i].peso * 10);
+                   total += 10;
                 }
             }
         }
