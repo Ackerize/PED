@@ -37,18 +37,24 @@ void vaciarPlaylist(queue <Canciones> &q){
     cout << "Se ha vaciado exitosamente" << endl; 
 }
 
-void mostrarPlaylist(queue <Canciones> &q) 
-{ 
+void mostrarPlaylist(queue <Canciones> q) 
+{
+    if(q.empty()){
+        cout << "La playlist esta vacia" << endl;
+        return;
+    } 
     queue <Canciones> aux = q; 
     int contador = 1;
     Canciones actual;
+    cout << "/********************/" << endl;
     while (!aux.empty()) 
     { 
         actual = aux.front();
         cout << contador << ".  " << actual.titulo << " - " << actual.cantante << " - " << actual.genero << " - " << actual.duracion << endl; 
         aux.pop(); 
+        contador++;
     } 
-    cout << '\n'; 
+    cout << "/********************/" << endl;
 } 
 
 void menu(queue <Canciones> &q, int opcion)
