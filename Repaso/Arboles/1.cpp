@@ -130,7 +130,7 @@ void PreOrder(ABB arbol, string tipo){
             cout<<"\nTipo Primario: "<<arbol->dato.tipo1;
             cout<<"\nTipo Secundario: "<<arbol->dato.tipo2;
             cout<<endl;
-		}
+	}
         PreOrder(arbol->izq);
         PreOrder(arbol->der);
     }
